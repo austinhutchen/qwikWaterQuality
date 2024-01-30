@@ -29,7 +29,7 @@ def getMedianNum(bArray, iFilterLen):
 
 
 def setup():
-    # Serial.begin(115200)  # Commented as there is no direct equivalent in Python
+
     pass
 
 
@@ -43,7 +43,7 @@ def loop():
         analogSampleTimepoint = int(time.time() * 1000)
         analogBuffer[
             analogBufferIndex
-        ] = 0  # Replace analogRead(TdsSensorPin) with 0 for simulation purposes
+        ] = 0  
         analogBufferIndex += 1
         if analogBufferIndex == SCOUNT:
             analogBufferIndex = 0
