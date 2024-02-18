@@ -1,5 +1,31 @@
-# Write your code here :-)
+import machine
+import ssd1306
+import board
 import time
+# Define the pins for SCL and SDA
+
+# Initialize SCL and SDA pins
+scl_pin = machine.Pin(board.SCL)
+sda_pin = machine.Pin(board.SDA)
+
+# Initialize I2C
+i2c = machine.I2C(0, scl=scl_pin, sda=sda_pin, freq=400000)
+
+# Define display dimensions
+WIDTH = 128
+HEIGHT = 64
+
+# Initialize the OLED display
+oled = ssd1306.SSD1306_I2C(WIDTH, HEIGHT, i2c)
+
+# Clear the display
+oled.fill(0)
+oled.show()
+
+# Display something on the screen
+oled.text("Hello, World!", 0, 0)
+oled.show()
+
 
 TdsSensorPin = 0  # A0 pin
 VREF = 5.0  # analog reference voltage(Volt) of the ADC
