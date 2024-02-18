@@ -1,2 +1,2 @@
 open source RP2040-based REPL water quality sensor.
-<img src="IMG_8091.JPG"/>
+<img src="IMG_8091.JPG" height="50vh" width="50vh" />
